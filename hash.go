@@ -37,9 +37,9 @@ func Hash(tag string, data []byte) []byte {
 	return h.Sum(nil)
 }
 
-// HashPassword generates a bcrypt hash of the password using work factor 14
+// HashPassword generates a bcrypt hash of the password using work factor 10
 func HashPassword(password []byte) ([]byte, error) {
-	return bcrypt.GenerateFromPassword(password, 14)
+	return bcrypt.GenerateFromPassword(password, 10)
 }
 
 // CheckPassword securely compares a bcrypt hashed password with its possible
